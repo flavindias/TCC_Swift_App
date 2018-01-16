@@ -18,6 +18,7 @@
 		87D7FC2F200E98D300F6890B /* TCCAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D7FC2E200E98D300F6890B /* TCCAddress.swift */; };
 		87D7FC31200E98E800F6890B /* TCCSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D7FC30200E98E800F6890B /* TCCSchedule.swift */; };
 		87D7FC33200E9AC800F6890B /* TCCLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D7FC32200E9AC800F6890B /* TCCLocal.swift */; };
+		87D7FC36200EA5A500F6890B /* TCCPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D7FC35200EA5A500F6890B /* TCCPhoto.swift */; };
 		D9A3039B1B60780C9762B855 /* Pods_Turismo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EF7EAA29E5CA69FB0A3879 /* Pods_Turismo.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		87D7FC2E200E98D300F6890B /* TCCAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCAddress.swift; sourceTree = "<group>"; };
 		87D7FC30200E98E800F6890B /* TCCSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCSchedule.swift; sourceTree = "<group>"; };
 		87D7FC32200E9AC800F6890B /* TCCLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCLocal.swift; sourceTree = "<group>"; };
+		87D7FC35200EA5A500F6890B /* TCCPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCPhoto.swift; sourceTree = "<group>"; };
 		F1EF7EAA29E5CA69FB0A3879 /* Pods_Turismo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Turismo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				87D7FC2E200E98D300F6890B /* TCCAddress.swift */,
+				87D7FC35200EA5A500F6890B /* TCCPhoto.swift */,
 				87D7FC32200E9AC800F6890B /* TCCLocal.swift */,
 				87D7FC30200E98E800F6890B /* TCCSchedule.swift */,
 			);
@@ -378,6 +381,7 @@
 				87D7FC2F200E98D300F6890B /* TCCAddress.swift in Sources */,
 				87D7FC31200E98E800F6890B /* TCCSchedule.swift in Sources */,
 				87D7FC2B200E984300F6890B /* Reachability.swift in Sources */,
+				87D7FC36200EA5A500F6890B /* TCCPhoto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

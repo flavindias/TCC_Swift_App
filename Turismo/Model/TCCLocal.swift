@@ -27,6 +27,7 @@ class TCCLocal: Mappable {
     var thumb: String?
     var address: TCCAddress?
     var schedule: TCCSchedule?
+    var photos: [TCCPhoto]?
     
     required init?(map: Map){
         
@@ -49,6 +50,7 @@ class TCCLocal: Mappable {
         thumb <- map["thumb"]
         address <- map["address"]
         schedule <- map["schedule"]
+        photos <- map["photos"]
     }
     
     /*
