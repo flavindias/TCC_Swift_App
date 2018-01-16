@@ -11,9 +11,13 @@ import Alamofire
 import AlamofireObjectMapper
 
 class Reachability {
-    func getLocals(_ local: TCCLocal, completion: @escaping (_ success: Bool, _ locals: [TCCLocal], _ message: String) -> ()){
+    func getLocals(completion: @escaping (_ success: Bool, _ locals: [TCCLocal], _ message: String) -> ()){
         Alamofire.request("http://api.tcc.flavindias.com.br/locals/")
-            .validate()
+            .responseString{
+                response in
+                print(response)
+            }
+//            .validate()
             .responseArray(completionHandler: { (response: DataResponse<[TCCLocal]>) in
                 if let localsArray = response.result.value{
                     completion(true, localsArray, "")
