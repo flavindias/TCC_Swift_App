@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Obje
+import ObjectMapper
 
 class TCCAddress: Mappable {
     var id : Int?

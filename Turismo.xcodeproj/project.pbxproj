@@ -123,9 +123,7 @@
 				87D7FBFC200E931700F6890B /* AppDelegate.swift */,
 				87D7FBFE200E931700F6890B /* ViewController.swift */,
 				87D7FC2A200E984300F6890B /* Reachability.swift */,
-				87D7FC2E200E98D300F6890B /* TCCAddress.swift */,
-				87D7FC32200E9AC800F6890B /* TCCLocal.swift */,
-				87D7FC30200E98E800F6890B /* TCCSchedule.swift */,
+				87D7FC34200EA0E300F6890B /* Model */,
 				87D7FC00200E931700F6890B /* Main.storyboard */,
 				87D7FC03200E931700F6890B /* Assets.xcassets */,
 				87D7FC05200E931700F6890B /* LaunchScreen.storyboard */,
@@ -150,6 +148,16 @@
 				87D7FC1E200E931800F6890B /* Info.plist */,
 			);
 			path = TurismoUITests;
+			sourceTree = "<group>";
+		};
+		87D7FC34200EA0E300F6890B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				87D7FC2E200E98D300F6890B /* TCCAddress.swift */,
+				87D7FC32200E9AC800F6890B /* TCCLocal.swift */,
+				87D7FC30200E98E800F6890B /* TCCSchedule.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B0E0D20F6D3E5BE18C7DCBE0 /* Pods */ = {
