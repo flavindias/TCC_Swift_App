@@ -37,4 +37,6 @@ class TCCSchedule: Mappable {
         created <- map["created"]
         modified <- map["modified"]
     }
+    
+    
 }

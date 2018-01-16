@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AlamofireObjectMapper
 import ObjectMapper
 
 class TCCLocal: Mappable {
@@ -24,6 +25,8 @@ class TCCLocal: Mappable {
     var description: String?
     var rating: Int?
     var thumb: String?
+    var address: TCCAddress?
+    var schedule: TCCSchedule?
     
     required init?(map: Map){
         
@@ -44,5 +47,30 @@ class TCCLocal: Mappable {
         description <- map["description"]
         rating <- map["rating"]
         thumb <- map["thumb"]
+        address <- map["address"]
+        schedule <- map["schedule"]
+    }
+    
+    /*
+     *   Método para conversão de datas advindas do servidor para DateComponents
+     *   Entrada: String formatada no JSON
+     *   Saída: Objeto do tipo DateComponetns com ano, mes dia hora e minuto
+     */
+    func stringToDateComponents(_ dateString: String) -> DateComponents?{
+        
+        let formatter1 = DateFormatter()
+        
+        formatter1.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZ"
+        //        formatter1.locale = NSLocale.init(localeIdentifier: "enUSPOSIXLocale") as Locale!
+        //        formatter1.timeZone = TimeZone(abbreviation: "UTC")
+        let value = formatter1.date(from: dateString)
+        if value != nil{
+            let date = value! as Date
+            let comp = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: date)
+            return comp
+        }
+        else{
+            return nil
+        }
     }
 }
