@@ -20,8 +20,14 @@ class Reachability {
             }
 
         }
-
-        
-        
     }
+    func getLocalsPaginated(page: Int, completion: @escaping (_ success: Bool, _ locals: [TCCLocal], _ message: String) -> ()){
+        Alamofire.request("http://api.tcc.flavindias.com.br/locals/index?page=\(page)").responseArray(keyPath: "result.locals") { (response: DataResponse<[TCCLocal]>) in
+            if let localsArray = response.result.value{
+                completion(true, localsArray, "")
+            }
+            
+        }
+    }
+
 }

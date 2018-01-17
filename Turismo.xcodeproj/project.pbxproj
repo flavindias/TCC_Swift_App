@@ -21,6 +21,7 @@
 		87D7FC36200EA5A500F6890B /* TCCPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D7FC35200EA5A500F6890B /* TCCPhoto.swift */; };
 		87D7FC38200EC1F900F6890B /* UserPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D7FC37200EC1F900F6890B /* UserPin.swift */; };
 		87D7FC3A200EC34700F6890B /* LocalPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D7FC39200EC34700F6890B /* LocalPin.swift */; };
+		87D7FC3F200F88A400F6890B /* LocalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D7FC3E200F88A400F6890B /* LocalsTableViewController.swift */; };
 		D9A3039B1B60780C9762B855 /* Pods_Turismo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EF7EAA29E5CA69FB0A3879 /* Pods_Turismo.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		87D7FC35200EA5A500F6890B /* TCCPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCPhoto.swift; sourceTree = "<group>"; };
 		87D7FC37200EC1F900F6890B /* UserPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPin.swift; sourceTree = "<group>"; };
 		87D7FC39200EC34700F6890B /* LocalPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPin.swift; sourceTree = "<group>"; };
+		87D7FC3E200F88A400F6890B /* LocalsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalsTableViewController.swift; sourceTree = "<group>"; };
 		F1EF7EAA29E5CA69FB0A3879 /* Pods_Turismo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Turismo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -128,6 +130,7 @@
 			children = (
 				87D7FBFC200E931700F6890B /* AppDelegate.swift */,
 				87D7FBFE200E931700F6890B /* MapViewController.swift */,
+				87D7FC3E200F88A400F6890B /* LocalsTableViewController.swift */,
 				87D7FC3B200EC36000F6890B /* Utils */,
 				87D7FC34200EA0E300F6890B /* Model */,
 				87D7FC00200E931700F6890B /* Main.storyboard */,
@@ -396,6 +399,7 @@
 				87D7FC2F200E98D300F6890B /* TCCAddress.swift in Sources */,
 				87D7FC31200E98E800F6890B /* TCCSchedule.swift in Sources */,
 				87D7FC2B200E984300F6890B /* Reachability.swift in Sources */,
+				87D7FC3F200F88A400F6890B /* LocalsTableViewController.swift in Sources */,
 				87D7FC36200EA5A500F6890B /* TCCPhoto.swift in Sources */,
 				87D7FC3A200EC34700F6890B /* LocalPin.swift in Sources */,
 			);
