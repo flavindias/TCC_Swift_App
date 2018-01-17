@@ -26,6 +26,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         self.locationManager.requestWhenInUseAuthorization()
         self.initLocationService()
+        self.updateTCCLocations()
     }
     
     override func didReceiveMemoryWarning() {
@@ -133,7 +134,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     //plotar pontos no mapa
     func updateTCCLocations(){
-        
+        print("chamou")
         self.mapView.removeAnnotations(self.mapView.annotations)
         
         reach.getLocals(){ (success, locals, message) in
