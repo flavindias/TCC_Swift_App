@@ -17,6 +17,26 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     let reach = Reachability()
     
     @IBOutlet weak var mapView: MKMapView!
+    override func viewDidAppear(_ animated: Bool) {
+        if(CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse){
+            if(self.locationManager.location == nil){
+                self.locationManager.requestWhenInUseAuthorization()
+            }
+            else{
+                self.currentLocation = self.locationManager.location!
+            }
+        }
+        
+        if let coordinate = self.locationManager.location?.coordinate{
+            let cl = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+            self.centerMapOnLocation(cl)
+        }
+        else{
+            //alert
+            print("Lembrar de colocar um uialertview")
+        }
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -153,10 +173,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                         }
                         
                     }
-                    
-                    
-                    
-                    
                     
                 }
             }
