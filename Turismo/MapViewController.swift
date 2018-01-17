@@ -34,6 +34,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         else{
             //alert
             print("Lembrar de colocar um uialertview")
+            let cl = CLLocation(latitude: -8.0536907, longitude: -34.9030814)
+            self.centerMapOnLocation(cl)
         }
         
     }
@@ -162,8 +164,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 for (_, local) in locals.enumerated(){
                     var region = MKCoordinateRegion()
                     if let address = local.address{
+                    
                         if let lat = address.lat{
                             if let lng = address.lng{
+                                print(lat)
                                 region.center.latitude = lat
                                 region.center.longitude = lng
                                 let annotation = LocalPin()

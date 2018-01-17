@@ -17,10 +17,23 @@ class TCCAddress: Mappable {
     var city : String?
     var state : String?
     var complement : String?
-    var created : DateComponents?
-    var modified : DateComponents?
-    var lat : CLLocationDegrees?
-    var lng : CLLocationDegrees?
+    var created : String?
+    var modified : String?
+    var lat : Double?
+    var lng : Double?
+    
+    let utils = Utils()
+    
+    let transformDouble = TransformOf<Double, String>(fromJSON: { (value: String?) -> Double? in
+        // transforma o valor da String? em Double?
+        return Double(value!)
+    }, toJSON: { (value: Double?) -> String? in
+        // transforma o valor da Double? em String?
+        if let value = value {
+            return String(value)
+        }
+        return nil
+    })
     
     required init?(map: Map){
         
@@ -35,8 +48,8 @@ class TCCAddress: Mappable {
         complement <- map["complement"]
         created <- map["created"]
         modified <- map["modified"]
-        lat <- map["lat"]
-        lng <- map["lng"]
+        lat <- (map["lat"], transformDouble)
+        lng <- (map["lng"], transformDouble)
     }
     
 }
