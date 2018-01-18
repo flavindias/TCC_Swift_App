@@ -94,7 +94,7 @@ class LocalsTableViewController: UITableViewController {
                 cell.localRatingUILabel.text = "\(rating)"
             }
             if let thumb = local.thumb{
-                cell.localRatingUIImageView.af_setImage(withURL: URL(string: thumb)!)
+                cell.localThumbUIImageView.af_setImage(withURL: URL(string: thumb)!)
             }
             
             return cell

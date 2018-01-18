@@ -50,7 +50,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         self.initLocationService()
         self.updateTCCLocations()
         let menuButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "list"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.go))
-        self.navigationItem.leftBarButtonItem = menuButton
+        self.navigationItem.rightBarButtonItem = menuButton
         
     }
     

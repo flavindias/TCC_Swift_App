@@ -35,7 +35,7 @@
                     <navigationItem key="navigationItem" id="EPW-BY-cPa"/>
                     <connections>
                         <outlet property="mapView" destination="wPo-Pb-PjU" id="kpg-hy-weq"/>
-                        <segue destination="EU6-jO-upZ" kind="show" id="wOw-53-kBi"/>
+                        <segue destination="EU6-jO-upZ" kind="show" identifier="segueToList" id="wOw-53-kBi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -143,7 +143,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A7O-7J-r1Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1165.5999999999999" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1257" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7tr-Ot-Ytf">
