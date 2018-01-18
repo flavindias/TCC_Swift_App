@@ -49,8 +49,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         self.locationManager.requestWhenInUseAuthorization()
         self.initLocationService()
         self.updateTCCLocations()
-        let menuButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "list"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.go))
-        self.navigationItem.rightBarButtonItem = menuButton
+        let rightMenuButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "list"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.goList))
+        self.navigationItem.rightBarButtonItem = rightMenuButton
+        
+        let leftMenuButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "about"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.goAbout))
+        self.navigationItem.leftBarButtonItem = leftMenuButton
         
     }
     
@@ -58,8 +61,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @objc func go(){
+    @objc func goAbout(){
+        self.performSegue(withIdentifier: "segueToAbout", sender: nil)
+    }
+    @objc func goList(){
         self.performSegue(withIdentifier: "segueToList", sender: nil)
     }
     
@@ -191,7 +196,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueToList"{
-            let view = segue.destination as! LocalsTableViewController
+            let _ = segue.destination as! LocalsTableViewController
+        }
+        else if segue.identifier == "segueToAbout"{
+            let _ = segue.destination as! AboutViewController
         }
     }
     

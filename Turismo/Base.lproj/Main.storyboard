@@ -12,15 +12,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--About View Controller-->
         <scene sceneID="mIt-p4-6VL">
             <objects>
-                <viewController id="tcf-3v-2nW" sceneMemberID="viewController">
+                <viewController id="tcf-3v-2nW" customClass="AboutViewController" customModule="Turismo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="op8-1p-si9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eps-2O-3tE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ufrpe" translatesAutoresizingMaskIntoConstraints="NO" id="eps-2O-3tE">
                                 <rect key="frame" x="112.5" y="80" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eps-2O-3tE" secondAttribute="height" multiplier="1:1" id="JjV-55-S2W"/>
@@ -63,6 +63,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WCd-xC-Cx6"/>
                     </view>
+                    <connections>
+                        <outlet property="TCCTitleUILabel" destination="0bw-J7-ng9" id="LWO-AQ-wjQ"/>
+                        <outlet property="UFRPEUIImageView" destination="eps-2O-3tE" id="W5r-Uw-HLk"/>
+                        <outlet property="professorNameUILabel" destination="X92-PQ-HPi" id="ecg-Ol-lWn"/>
+                        <outlet property="studentNameUILabel" destination="sKI-eK-N3T" id="ceX-dO-5ET"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="arO-hj-YUr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -224,5 +230,6 @@
     </scenes>
     <resources>
         <image name="star" width="25" height="25"/>
+        <image name="ufrpe" width="495" height="387"/>
     </resources>
 </document>
