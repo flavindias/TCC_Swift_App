@@ -60,7 +60,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     @objc func go(){
-        self.performSegue(withIdentifier: "segueToTableView", sender: nil)
+        self.performSegue(withIdentifier: "segueToList", sender: nil)
     }
     
     //colocar o mapa em uma determinada localização
