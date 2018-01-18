@@ -21,6 +21,11 @@ class LocalTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.localThumbUIImageView.backgroundColor = UIColor.white
+        self.localThumbUIImageView.layer.borderColor = UIColor(red:0.14, green:0.16, blue:0.18, alpha:1.0).cgColor
+        self.localThumbUIImageView.layer.borderWidth = 1.5
+        self.localThumbUIImageView.layer.cornerRadius = self.localThumbUIImageView.frame.size.width / 2
+        self.localThumbUIImageView.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,5 +33,12 @@ class LocalTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.localThumbUIImageView.backgroundColor = UIColor.white
+        self.localThumbUIImageView.layer.borderColor = UIColor(red:0.14, green:0.16, blue:0.18, alpha:1.0).cgColor
+        self.localThumbUIImageView.layer.borderWidth = 1.5
+        self.localThumbUIImageView.layer.cornerRadius = self.localThumbUIImageView.frame.size.width / 2
+        self.localThumbUIImageView.clipsToBounds = true
+    }
 }
