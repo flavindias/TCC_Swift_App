@@ -49,11 +49,18 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         self.locationManager.requestWhenInUseAuthorization()
         self.initLocationService()
         self.updateTCCLocations()
+        let menuButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "list"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.go))
+        self.navigationItem.leftBarButtonItem = menuButton
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @objc func go(){
+        self.performSegue(withIdentifier: "segueToTableView", sender: nil)
     }
     
     //colocar o mapa em uma determinada localização
@@ -156,7 +163,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     //plotar pontos no mapa
     func updateTCCLocations(){
-        print("chamou")
         self.mapView.removeAnnotations(self.mapView.annotations)
         
         reach.getLocals(){ (success, locals, message) in
@@ -182,6 +188,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             }
         }
         
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToList"{
+            let view = segue.destination as! LocalsTableViewController
+        }
     }
     
     
