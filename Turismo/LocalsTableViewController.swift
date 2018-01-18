@@ -30,6 +30,8 @@ class LocalsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        let menuButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "list"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.go))
+        self.navigationItem.leftBarButtonItem = menuButton
         self.tableView.delegate = self
         self.tableView.dataSource = self
     }
@@ -38,11 +40,12 @@ class LocalsTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
     }
-    
+    @objc func go(){
+        self.performSegue(withIdentifier: "segueToTableView", sender: nil)
+    }
     func getData(_ page: Int) {
         self.reach.getLocalsPaginated(page: page) { (success, locals, message) in
             if success{

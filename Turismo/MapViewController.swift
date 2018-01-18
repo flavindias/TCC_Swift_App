@@ -13,7 +13,7 @@ import CoreLocation
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     var locationManager = CLLocationManager()
     var currentLocation = CLLocation()
-    let regionRadius: CLLocationDistance = 1000
+    let regionRadius: CLLocationDistance = 8000
     let reach = Reachability()
     
     @IBOutlet weak var mapView: MKMapView!

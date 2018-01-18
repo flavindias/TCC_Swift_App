@@ -95,7 +95,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xc1-ta-KZr">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="Xc1-ta-KZr">
                                             <rect key="frame" x="322.5" y="76" width="13" height="13"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="Xc1-ta-KZr" secondAttribute="height" multiplier="1:1" id="8oS-CJ-x6w"/>
@@ -164,4 +164,7 @@
             <point key="canvasLocation" x="-270" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="star" width="25" height="25"/>
+    </resources>
 </document>
