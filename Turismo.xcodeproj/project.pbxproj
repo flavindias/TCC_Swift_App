@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8793D1602010450F00090AF3 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8793D15F2010450F00090AF3 /* AboutViewController.swift */; };
 		87D7FBFD200E931700F6890B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D7FBFC200E931700F6890B /* AppDelegate.swift */; };
 		87D7FBFF200E931700F6890B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D7FBFE200E931700F6890B /* MapViewController.swift */; };
 		87D7FC02200E931700F6890B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87D7FC00200E931700F6890B /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		58A91377A3591738AF4B1F5A /* Pods-Turismo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Turismo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Turismo/Pods-Turismo.debug.xcconfig"; sourceTree = "<group>"; };
 		71EB6F0C807F899BC5097EC6 /* Pods-Turismo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Turismo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Turismo/Pods-Turismo.release.xcconfig"; sourceTree = "<group>"; };
+		8793D15F2010450F00090AF3 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		87D7FBF9200E931700F6890B /* Turismo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Turismo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87D7FBFC200E931700F6890B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87D7FBFE200E931700F6890B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				87D7FBFE200E931700F6890B /* MapViewController.swift */,
 				87D7FC3E200F88A400F6890B /* LocalsTableViewController.swift */,
 				87D7FC422010210600F6890B /* LocalTableViewCell.swift */,
+				8793D15F2010450F00090AF3 /* AboutViewController.swift */,
 				87D7FC3B200EC36000F6890B /* Utils */,
 				87D7FC34200EA0E300F6890B /* Model */,
 				87D7FC00200E931700F6890B /* Main.storyboard */,
@@ -409,6 +412,7 @@
 				87D7FC41200F933800F6890B /* Utils.swift in Sources */,
 				87D7FC3F200F88A400F6890B /* LocalsTableViewController.swift in Sources */,
 				87D7FC36200EA5A500F6890B /* TCCPhoto.swift in Sources */,
+				8793D1602010450F00090AF3 /* AboutViewController.swift in Sources */,
 				87D7FC3A200EC34700F6890B /* LocalPin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
