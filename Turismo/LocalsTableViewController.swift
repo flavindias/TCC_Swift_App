@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class LocalsTableViewController: UITableViewController {
     let reach = Reachability()
@@ -69,15 +70,39 @@ class LocalsTableViewController: UITableViewController {
         return self.locals.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
         // Configure the cell...
+        let local = locals[indexPath.row]
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "localCell", for: indexPath) as? LocalTableViewCell{
+            if let name = local.name{
+                cell.localNameUILabel.text = name
+            }
+            if let url = local.site{
+                cell.localSiteUILabel.text = url
+            }
+            if let address = local.address{
+                if let street = address.street{
+                    cell.localAddressLine1UILabel.text = street
+                }
+                if let city = address.city{
+                    if let state = address.state{
+                        cell.localAddressLine2UILabel.text = "\(city) - \(state)"
+                    }
+                }
+            }
+            if let rating = local.rating{
+                cell.localRatingUILabel.text = "\(rating)"
+            }
+            if let thumb = local.thumb{
+                cell.localRatingUIImageView.af_setImage(withURL: URL(string: thumb)!)
+            }
+            
+            return cell
+        }
 
-        return cell
+
+        return UITableViewCell()
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
