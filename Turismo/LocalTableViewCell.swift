@@ -10,6 +10,14 @@ import UIKit
 
 class LocalTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var localNameUILabel: UILabel!
+    @IBOutlet weak var localSiteUILabel: UILabel!
+    @IBOutlet weak var localAddressLine1UILabel: UILabel!
+    @IBOutlet weak var localAddressLine2UILabel: UILabel!
+    @IBOutlet weak var localRatingUILabel: UILabel!
+    @IBOutlet weak var localRatingUIImageView: UIImageView!
+    @IBOutlet weak var localThumbUIImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

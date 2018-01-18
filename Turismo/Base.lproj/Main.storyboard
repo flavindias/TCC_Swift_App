@@ -124,6 +124,15 @@
                                         <constraint firstAttribute="trailing" secondItem="8kp-dS-8MY" secondAttribute="trailing" constant="16" id="zHu-gC-Zac"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="localAddressLine1UILabel" destination="tVr-8d-AHj" id="snw-ch-WO4"/>
+                                    <outlet property="localAddressLine2UILabel" destination="8Sr-4d-bsz" id="PE9-V6-LZN"/>
+                                    <outlet property="localNameUILabel" destination="W7V-2F-2eC" id="wg6-c3-isX"/>
+                                    <outlet property="localRatingUIImageView" destination="Xc1-ta-KZr" id="ZHw-GO-o5i"/>
+                                    <outlet property="localRatingUILabel" destination="wQ1-Pe-deL" id="g6p-qg-8Nx"/>
+                                    <outlet property="localSiteUILabel" destination="i3n-ea-Dz4" id="whb-yZ-w9a"/>
+                                    <outlet property="localThumbUIImageView" destination="8kp-dS-8MY" id="ftW-a6-6yi"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
