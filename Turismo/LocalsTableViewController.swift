@@ -123,6 +123,11 @@ class LocalsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
+    
     //    Função responsável pelo scroll infinito
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let bottom = scrollView.contentSize.height - scrollView.frame.size.height
