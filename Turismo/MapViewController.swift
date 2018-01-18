@@ -54,6 +54,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         let leftMenuButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "about"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.goAbout))
         self.navigationItem.leftBarButtonItem = leftMenuButton
+        self.navigationItem.title = "Mapa turístico"
         
     }
     

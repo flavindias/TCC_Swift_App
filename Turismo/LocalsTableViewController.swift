@@ -33,6 +33,7 @@ class LocalsTableViewController: UITableViewController {
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.navigationItem.title = "Pontos turísticos"
     }
 
     override func didReceiveMemoryWarning() {
