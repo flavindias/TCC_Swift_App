@@ -283,6 +283,12 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5f-fm-2Cm">
+                                                <rect key="frame" x="8" y="408" width="359" height="24"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -291,12 +297,14 @@
                                             <constraint firstItem="gsB-HN-T2v" firstAttribute="leading" secondItem="SPj-AP-WQi" secondAttribute="leading" constant="8" id="5zW-d8-HKz"/>
                                             <constraint firstItem="bBz-oX-Tri" firstAttribute="top" secondItem="dxa-tq-ipa" secondAttribute="bottom" constant="8" id="7kV-6h-q0M"/>
                                             <constraint firstItem="IUP-HT-OVG" firstAttribute="leading" secondItem="SPj-AP-WQi" secondAttribute="leading" constant="8" id="9rs-GO-lc6"/>
+                                            <constraint firstItem="x5f-fm-2Cm" firstAttribute="leading" secondItem="SPj-AP-WQi" secondAttribute="leading" constant="8" id="HOk-at-Lyu"/>
                                             <constraint firstAttribute="trailing" secondItem="TV3-uo-Ig2" secondAttribute="trailing" constant="8" id="HUK-vc-PBe"/>
                                             <constraint firstAttribute="trailing" secondItem="fJK-w8-BVv" secondAttribute="trailing" constant="8" id="J4m-yK-aPO"/>
                                             <constraint firstItem="MuR-SA-m2q" firstAttribute="leading" secondItem="SPj-AP-WQi" secondAttribute="leading" constant="8" id="JTG-8g-o1e"/>
                                             <constraint firstAttribute="trailing" secondItem="MuR-SA-m2q" secondAttribute="trailing" constant="8" id="L1U-lV-b9h"/>
                                             <constraint firstAttribute="trailing" secondItem="4I5-Ol-brO" secondAttribute="trailing" id="PZu-61-ylL"/>
                                             <constraint firstItem="fJK-w8-BVv" firstAttribute="leading" secondItem="SPj-AP-WQi" secondAttribute="leading" constant="8" id="VUm-jc-WLc"/>
+                                            <constraint firstAttribute="trailing" secondItem="x5f-fm-2Cm" secondAttribute="trailing" constant="8" id="WRY-xJ-ZBQ"/>
                                             <constraint firstItem="4I5-Ol-brO" firstAttribute="top" secondItem="SPj-AP-WQi" secondAttribute="top" constant="-64" id="Y8t-ea-no9"/>
                                             <constraint firstItem="up9-Sf-l2q" firstAttribute="top" secondItem="MuR-SA-m2q" secondAttribute="bottom" constant="8" id="YE4-9H-8J3"/>
                                             <constraint firstItem="bBz-oX-Tri" firstAttribute="leading" secondItem="SPj-AP-WQi" secondAttribute="leading" constant="8" id="ZPf-u6-ZwZ"/>
@@ -311,6 +319,7 @@
                                             <constraint firstItem="EUH-bj-cSj" firstAttribute="leading" secondItem="SPj-AP-WQi" secondAttribute="leading" constant="8" id="lut-kN-Mvc"/>
                                             <constraint firstAttribute="trailing" secondItem="up9-Sf-l2q" secondAttribute="trailing" constant="8" id="nES-ns-aAG"/>
                                             <constraint firstAttribute="trailing" secondItem="dxa-tq-ipa" secondAttribute="trailing" constant="8" id="q50-Wd-LXO"/>
+                                            <constraint firstItem="x5f-fm-2Cm" firstAttribute="top" secondItem="up9-Sf-l2q" secondAttribute="bottom" constant="8" id="qrh-Zm-gff"/>
                                             <constraint firstItem="gsB-HN-T2v" firstAttribute="top" secondItem="TV3-uo-Ig2" secondAttribute="bottom" constant="8" id="scz-Vq-9m1"/>
                                             <constraint firstItem="dxa-tq-ipa" firstAttribute="leading" secondItem="SPj-AP-WQi" secondAttribute="leading" constant="8" id="svh-r4-TFo"/>
                                             <constraint firstItem="dxa-tq-ipa" firstAttribute="top" secondItem="EUH-bj-cSj" secondAttribute="bottom" constant="8" id="vNe-42-7t3"/>
@@ -347,6 +356,7 @@
                         <outlet property="nameUILabel" destination="fJK-w8-BVv" id="cu8-cS-AIj"/>
                         <outlet property="phoneBodyUILabel" destination="bBz-oX-Tri" id="T0z-mv-Esm"/>
                         <outlet property="phoneTitleUILabel" destination="dxa-tq-ipa" id="6pV-Gt-oaP"/>
+                        <outlet property="photosTitleUILabel" destination="x5f-fm-2Cm" id="o29-ht-Gxa"/>
                         <outlet property="thumbUIImageView" destination="4I5-Ol-brO" id="lWs-Dq-2Kd"/>
                         <outlet property="urlBodyUILabel" destination="gsB-HN-T2v" id="bUm-93-tkK"/>
                         <outlet property="urlTitleUILabel" destination="TV3-uo-Ig2" id="Mlx-po-Fzm"/>

@@ -20,10 +20,15 @@ class DetailLocalViewController: UIViewController {
     @IBOutlet weak var urlBodyUILabel: UILabel!
     @IBOutlet weak var addressTitleUILabel: UILabel!
     @IBOutlet weak var addressBodyUILabel: UILabel!
+    @IBOutlet weak var photosTitleUILabel: UILabel!
+    var local: TCCLocal?
+    let reach = Reachability()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,6 +36,9 @@ class DetailLocalViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func getData(){
+        
+    }
 
     /*
     // MARK: - Navigation

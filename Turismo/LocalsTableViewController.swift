@@ -104,7 +104,11 @@ class LocalsTableViewController: UITableViewController {
 
         return UITableViewCell()
     }
-
+//    Selecionando o local da lista
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedLocal = locals[indexPath.row]
+        self.performSegue(withIdentifier: "segueToDetail", sender: nil)
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -166,5 +170,14 @@ class LocalsTableViewController: UITableViewController {
             
         }
     }
+//    Ir para outra tela
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToDetail"{
+            let view = segue.destination as! DetailLocalViewController
+            view.local = self.selectedLocal
+        }
+    }
+    
+    
 
 }
