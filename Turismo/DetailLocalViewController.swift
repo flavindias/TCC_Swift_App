@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailLocalViewController: UIViewController {
+class DetailLocalViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var thumbUIImageView: UIImageView!
     @IBOutlet weak var nameUILabel: UILabel!
@@ -21,6 +21,7 @@ class DetailLocalViewController: UIViewController {
     @IBOutlet weak var addressTitleUILabel: UILabel!
     @IBOutlet weak var addressBodyUILabel: UILabel!
     @IBOutlet weak var photosTitleUILabel: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
     var local: TCCLocal!
     let reach = Reachability()
     
@@ -28,6 +29,12 @@ class DetailLocalViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
+        
         self.getData()
         self.addressTitleUILabel.text = "Endereço"
         self.descriptionTitleUILabel.text = "Sobre"
@@ -66,6 +73,7 @@ class DetailLocalViewController: UIViewController {
                 if let url = self.local.site{
                     self.urlBodyUILabel.text = url
                 }
+                self.collectionView.reloadData()
                 
             }
         }
@@ -80,5 +88,28 @@ class DetailLocalViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if let photos = self.local.photos{
+            return photos.count
+        }
+        else{
+            return 0
+        }
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.row)
+    }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCollectionViewCell", for: indexPath) as? PhotoCollectionViewCell{
+            if let photos = self.local.photos{
+                if let url = photos[indexPath.row].url{
+                    cell.photoUIImageView.af_setImage(withURL: URL(string: url)!)
+                }
+                
+            }
+           
+            return cell
+        }
+        return UICollectionViewCell()
+    }
 }
