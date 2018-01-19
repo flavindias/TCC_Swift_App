@@ -56,6 +56,7 @@ class DetailLocalViewController: UIViewController {
                 
                 if let name = self.local.name{
                     self.nameUILabel.text = name
+                    self.title = name
                 }
                 if let thumb = self.local.thumb{
                     self.thumbUIImageView.af_setImage(withURL: URL(string: thumb)!)
@@ -116,6 +117,7 @@ extension DetailLocalViewController: UICollectionViewDataSource{
             return photos.count
         }
         else{
+            self.photosTitleUILabel.text = ""
             return 0
         }
     }
