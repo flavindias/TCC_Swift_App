@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailLocalViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class DetailLocalViewController: UIViewController {
 
     @IBOutlet weak var thumbUIImageView: UIImageView!
     @IBOutlet weak var nameUILabel: UILabel!
@@ -88,6 +88,29 @@ class DetailLocalViewController: UIViewController, UICollectionViewDelegate, UIC
         // Pass the selected object to the new view controller.
     }
     */
+    
+}
+extension DetailLocalViewController: UICollectionViewDelegate{
+//    ação realizada ao tocar em uma foto
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.row)
+    }
+}
+extension DetailLocalViewController: UICollectionViewDataSource{
+//    Preenchimento da celula do collectionview
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCollectionViewCell", for: indexPath) as? PhotoCollectionViewCell{
+            if let photos = self.local.photos{
+                if let url = photos[indexPath.row].url{
+                    cell.photoUIImageView.af_setImage(withURL: URL(string: url)!)
+                }
+            }
+            return cell
+        }
+        return UICollectionViewCell()
+    }
+    
+//    Quantidade de fotos dentro do colectionview
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let photos = self.local.photos{
             return photos.count
@@ -95,21 +118,5 @@ class DetailLocalViewController: UIViewController, UICollectionViewDelegate, UIC
         else{
             return 0
         }
-    }
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.row)
-    }
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCollectionViewCell", for: indexPath) as? PhotoCollectionViewCell{
-            if let photos = self.local.photos{
-                if let url = photos[indexPath.row].url{
-                    cell.photoUIImageView.af_setImage(withURL: URL(string: url)!)
-                }
-                
-            }
-           
-            return cell
-        }
-        return UICollectionViewCell()
     }
 }
