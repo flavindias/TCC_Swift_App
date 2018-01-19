@@ -10,6 +10,16 @@ import UIKit
 
 class DetailLocalViewController: UIViewController {
 
+    @IBOutlet weak var thumbUIImageView: UIImageView!
+    @IBOutlet weak var nameUILabel: UILabel!
+    @IBOutlet weak var descriptionTitleUILabel: UILabel!
+    @IBOutlet weak var descriptionBodyUILabel: UILabel!
+    @IBOutlet weak var phoneTitleUILabel: UILabel!
+    @IBOutlet weak var phoneBodyUILabel: UILabel!
+    @IBOutlet weak var urlTitleUILabel: UILabel!
+    @IBOutlet weak var urlBodyUILabel: UILabel!
+    @IBOutlet weak var addressTitleUILabel: UILabel!
+    @IBOutlet weak var addressBodyUILabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 

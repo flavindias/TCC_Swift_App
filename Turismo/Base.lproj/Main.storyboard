@@ -339,6 +339,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="V5f-Ov-pjf"/>
                     </view>
+                    <connections>
+                        <outlet property="addressBodyUILabel" destination="up9-Sf-l2q" id="AgO-bG-tfe"/>
+                        <outlet property="addressTitleUILabel" destination="MuR-SA-m2q" id="oCG-fr-iBz"/>
+                        <outlet property="descriptionBodyUILabel" destination="EUH-bj-cSj" id="RwJ-xY-p6q"/>
+                        <outlet property="descriptionTitleUILabel" destination="IUP-HT-OVG" id="q8o-cz-f3X"/>
+                        <outlet property="nameUILabel" destination="fJK-w8-BVv" id="cu8-cS-AIj"/>
+                        <outlet property="phoneBodyUILabel" destination="bBz-oX-Tri" id="T0z-mv-Esm"/>
+                        <outlet property="phoneTitleUILabel" destination="dxa-tq-ipa" id="6pV-Gt-oaP"/>
+                        <outlet property="thumbUIImageView" destination="4I5-Ol-brO" id="lWs-Dq-2Kd"/>
+                        <outlet property="urlBodyUILabel" destination="gsB-HN-T2v" id="bUm-93-tkK"/>
+                        <outlet property="urlTitleUILabel" destination="TV3-uo-Ig2" id="Mlx-po-Fzm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWf-yT-eES" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
