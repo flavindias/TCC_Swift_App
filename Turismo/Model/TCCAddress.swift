@@ -22,7 +22,7 @@ class TCCAddress: Mappable {
     var lat : Double?
     var lng : Double?
     
-    let utils = Utils()
+    private let utils = Utils()
     
     let transformDouble = TransformOf<Double, String>(fromJSON: { (value: String?) -> Double? in
         // transforma o valor da String? em Double?

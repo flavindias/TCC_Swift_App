@@ -65,14 +65,34 @@ class DetailLocalViewController: UIViewController {
                     self.descriptionBodyUILabel.text = description
                 }
                 var phone = ""
+                var phone2 = ""
                 if let phone1 = self.local.phone_1{
                     phone = phone1
                 }
-                if let phone2 = self.local.phone_2{
-                    self.phoneBodyUILabel.text = "\(phone) \(phone2)"
+                if let str = self.local.phone_2{
+                    phone2 = str
                 }
+                self.phoneBodyUILabel.text = "\(phone) \(phone2)"
                 if let url = self.local.site{
                     self.urlBodyUILabel.text = url
+                }
+                if let address = self.local.address{
+                    var street = ""
+                    var city = ""
+                    var state = ""
+                    
+                    if let str = address.street{
+                        street = str
+                    }
+                    
+                    if let str = address.city{
+                        city = str
+                    }
+                    
+                    if let str = address.state{
+                        state = str
+                    }
+                    self.addressBodyUILabel.text = "\(street) \n \(city) - \(state)"
                 }
                 self.collectionView.reloadData()
                 
