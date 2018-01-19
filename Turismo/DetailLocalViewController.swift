@@ -21,13 +21,19 @@ class DetailLocalViewController: UIViewController {
     @IBOutlet weak var addressTitleUILabel: UILabel!
     @IBOutlet weak var addressBodyUILabel: UILabel!
     @IBOutlet weak var photosTitleUILabel: UILabel!
-    var local: TCCLocal?
+    var local: TCCLocal!
     let reach = Reachability()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.getData()
+        self.addressTitleUILabel.text = "Endereço"
+        self.descriptionTitleUILabel.text = "Sobre"
+        self.phoneTitleUILabel.text = "Telefone(s)"
+        self.urlTitleUILabel.text = "Site"
+        self.photosTitleUILabel.text = "Fotos"
         
     }
 
@@ -37,7 +43,32 @@ class DetailLocalViewController: UIViewController {
     }
     
     func getData(){
-        
+        self.reach.getLocalDetail(local: self.local) { (success, local, message) in
+            if success{
+                self.local = local
+                
+                if let name = self.local.name{
+                    self.nameUILabel.text = name
+                }
+                if let thumb = self.local.thumb{
+                    self.thumbUIImageView.af_setImage(withURL: URL(string: thumb)!)
+                }
+                if let description = self.local.description{
+                    self.descriptionBodyUILabel.text = description
+                }
+                var phone = ""
+                if let phone1 = self.local.phone_1{
+                    phone = phone1
+                }
+                if let phone2 = self.local.phone_2{
+                    self.phoneBodyUILabel.text = "\(phone) \(phone2)"
+                }
+                if let url = self.local.site{
+                    self.urlBodyUILabel.text = url
+                }
+                
+            }
+        }
     }
 
     /*

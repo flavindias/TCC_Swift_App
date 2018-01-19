@@ -30,9 +30,15 @@ class Reachability {
         }
     }
     func getLocalDetail(local: TCCLocal, completion: @escaping (_ success: Bool, _ local: TCCLocal, _ message: String) -> ()) {
-        Alamofire.request("http://api.tcc.flavindias.com.br/locals/view/\(local.id!)").responseObject(keyPath: "result") { (response: DataResponse<TCCLocal>) in
-            if let localsArray = response.result.value{
-                completion(true, localsArray, "")
+        Alamofire.request("http://api.tcc.flavindias.com.br/locals/view/\(local.id!)")
+            .responseString{
+                response in
+                print(response)
+            }
+            .responseObject(keyPath: "result.local") { (response: DataResponse<TCCLocal>) in
+            if let local = response.result.value{
+                print(local.photos)
+                completion(true, local, "")
             }
         }
     }
