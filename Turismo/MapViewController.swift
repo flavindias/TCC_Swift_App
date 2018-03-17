@@ -179,7 +179,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                     
                         if let lat = address.lat{
                             if let lng = address.lng{
-                                print(lat)
                                 region.center.latitude = lat
                                 region.center.longitude = lng
                                 let annotation = LocalPin()

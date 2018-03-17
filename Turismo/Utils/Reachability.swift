@@ -12,30 +12,36 @@ import AlamofireObjectMapper
 
 class Reachability {
     
+//    retorna todos os locais
     func getLocals(completion: @escaping (_ success: Bool, _ locals: [TCCLocal], _ message: String) -> ()){
-        Alamofire.request("http://api.tcc.flavindias.com.br/locals/").responseArray(keyPath: "result.locals") { (response: DataResponse<[TCCLocal]>) in
+        Alamofire.request("http://api.tcc.flavindias.com.br/locals/")
+            .validate()
+            .responseArray(keyPath: "result.locals") { (response: DataResponse<[TCCLocal]>) in
             if let localsArray = response.result.value{
-                print(localsArray)
                 completion(true, localsArray, "")
             }
-
         }
     }
+    
+//    retorna todos os locais de uma determinada página
     func getLocalsPaginated(page: Int, completion: @escaping (_ success: Bool, _ locals: [TCCLocal], _ message: String) -> ()){
-        Alamofire.request("http://api.tcc.flavindias.com.br/locals/index?page=\(page)").responseArray(keyPath: "result.locals") { (response: DataResponse<[TCCLocal]>) in
+        Alamofire.request("http://api.tcc.flavindias.com.br/locals/index?page=\(page)")
+            .validate()
+            .responseArray(keyPath: "result.locals") { (response: DataResponse<[TCCLocal]>) in
             if let localsArray = response.result.value{
                 completion(true, localsArray, "")
             }
-            
         }
     }
+    
+//    retorna as informações de um determinado local
     func getLocalDetail(local: TCCLocal, completion: @escaping (_ success: Bool, _ local: TCCLocal, _ message: String) -> ()) {
         Alamofire.request("http://api.tcc.flavindias.com.br/locals/view/\(local.id!)")
+            .validate()
             .responseObject(keyPath: "result.local") { (response: DataResponse<TCCLocal>) in
             if let local = response.result.value{
                 completion(true, local, "")
             }
         }
     }
-
 }

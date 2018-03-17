@@ -41,6 +41,7 @@ class DetailLocalViewController: UIViewController {
         self.phoneTitleUILabel.text = "Telefone(s)"
         self.urlTitleUILabel.text = "Site"
         self.photosTitleUILabel.text = "Fotos"
+        self.nameUILabel.text = ""
         
     }
 
@@ -55,7 +56,7 @@ class DetailLocalViewController: UIViewController {
                 self.local = local
                 
                 if let name = self.local.name{
-                    self.nameUILabel.text = name
+//                    self.nameUILabel.text = name
                     self.title = name
                 }
                 if let thumb = self.local.thumb{
@@ -92,7 +93,7 @@ class DetailLocalViewController: UIViewController {
                     if let str = address.state{
                         state = str
                     }
-                    self.addressBodyUILabel.text = "\(street) \n \(city) - \(state)"
+                    self.addressBodyUILabel.text = "\(street) \n\(city) - \(state)"
                 }
                 self.collectionView.reloadData()
                 
@@ -114,7 +115,6 @@ class DetailLocalViewController: UIViewController {
 extension DetailLocalViewController: UICollectionViewDelegate{
 //    ação realizada ao tocar em uma foto
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.row)
     }
 }
 extension DetailLocalViewController: UICollectionViewDataSource{
